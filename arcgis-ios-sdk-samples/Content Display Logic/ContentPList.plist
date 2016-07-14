@@ -544,6 +544,14 @@
                     <key>descriptionText</key>
                     <string>The sample shows how to position graphics using different surface placements</string>
                 </dict>
+                <dict>
+                    <key>displayName</key>
+                    <string>Use scene layer</string>
+                    <key>storyboardName</key>
+                    <string>UseSceneLayer</string>
+                    <key>descriptionText</key>
+                    <string>The sample shows how to use a scene layer in a scene</string>
+                </dict>
             </array>
         </dict>
     </array>
