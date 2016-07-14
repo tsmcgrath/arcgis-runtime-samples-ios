@@ -109,6 +109,7 @@
 		3E8526401B90E19C00690EBD /* DisplayMapViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E85263C1B90DE2C00690EBD /* DisplayMapViewController.swift */; };
 		3E8A25CB1D37054C00D14F08 /* UseSceneLayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A25CA1D37054C00D14F08 /* UseSceneLayerViewController.swift */; };
 		3E8A25CD1D3705B200D14F08 /* UseSceneLayer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8A25CC1D3705B200D14F08 /* UseSceneLayer.storyboard */; };
+		3E8A25EE1D3859C600D14F08 /* UseSceneLayerViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3E8A25CA1D37054C00D14F08 /* UseSceneLayerViewController.swift */; };
 		3EBA25401D2F104100AB0703 /* UniqueValueRenderer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EBA253F1D2F104100AB0703 /* UniqueValueRenderer.storyboard */; };
 		3EBA25421D2F106600AB0703 /* UniqueValueRendererViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBA25411D2F106600AB0703 /* UniqueValueRendererViewController.swift */; };
 		3EBA25431D2F1D9700AB0703 /* UniqueValueRendererViewController.swift in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3EBA25411D2F106600AB0703 /* UniqueValueRendererViewController.swift */; };
@@ -291,6 +292,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				3E8A25EE1D3859C600D14F08 /* UseSceneLayerViewController.swift in CopyFiles */,
 				3EEA06151D21C50E00E03774 /* SceneSymbolsViewController.swift in CopyFiles */,
 				3EEA06161D21C50E00E03774 /* DisplaySceneViewController.swift in CopyFiles */,
 				3EEA06171D21C50E00E03774 /* ExtrudeGraphicsViewController.swift in CopyFiles */,
