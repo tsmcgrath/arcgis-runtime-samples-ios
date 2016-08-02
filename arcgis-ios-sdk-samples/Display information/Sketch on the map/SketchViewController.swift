@@ -25,7 +25,7 @@ class SketchViewController: UIViewController {
     
     
     private var map:AGSMap!
-    private var geometrySketchOverlay:AGSGeometrySketchOverlay!
+    private var geometrySketchOverlay:AGSFreehandSketchOverlay!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +35,9 @@ class SketchViewController: UIViewController {
         
         self.map = AGSMap(basemap: AGSBasemap.lightGrayCanvasBasemap())
         
-        self.geometrySketchOverlay = AGSGeometrySketchOverlay()
-        self.geometrySketchOverlay.geometryBuilder = AGSPolylineBuilder(spatialReference: AGSSpatialReference.webMercator())
+        self.geometrySketchOverlay = AGSFreehandSketchOverlay()
+        self.geometrySketchOverlay.currentGeometryType = .Polygon
+//        self.geometrySketchOverlay.geometryBuilder = AGSPolylineBuilder(spatialReference: AGSSpatialReference.webMercator())
         self.mapView.sketchOverlay =  self.geometrySketchOverlay
         
         self.geometrySketchOverlay.enabled = true
@@ -59,7 +60,7 @@ class SketchViewController: UIViewController {
         //Enable/disable UI elements appropriately
         self.undoBBI.enabled = self.geometrySketchOverlay.undoManager.canUndo
         self.redoBBI.enabled = self.geometrySketchOverlay.undoManager.canRedo
-        self.clearBBI.enabled = self.geometrySketchOverlay.geometryBuilder != nil && !self.geometrySketchOverlay.geometryBuilder!.isEmpty()
+//        self.clearBBI.enabled = self.geometrySketchOverlay.geometryBuilder != nil && !self.geometrySketchOverlay.geometryBuilder!.isEmpty()
     }
     
     //MARK: - Actions
@@ -67,13 +68,13 @@ class SketchViewController: UIViewController {
     @IBAction func geometryValueChanged(segmentedControl:UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex {
         case 0://point
-            self.geometrySketchOverlay.geometryBuilder = AGSPointBuilder(spatialReference: AGSSpatialReference.webMercator())
+            self.geometrySketchOverlay.currentGeometryType = .Point
             
         case 1://polyline
-            self.geometrySketchOverlay.geometryBuilder = AGSPolylineBuilder(spatialReference: AGSSpatialReference.webMercator())
+            self.geometrySketchOverlay.currentGeometryType = .Polyline
             
         case 2://polygon
-            self.geometrySketchOverlay.geometryBuilder = AGSPolygonBuilder(spatialReference: AGSSpatialReference.webMercator())
+            self.geometrySketchOverlay.currentGeometryType = .Polygon
             
         default:
             break
